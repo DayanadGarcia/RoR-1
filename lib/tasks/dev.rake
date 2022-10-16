@@ -5,8 +5,8 @@ namespace :dev do
       show_spinner("Apagando o DB...") { %x(rails db:drop) }
       show_spinner("Criando o DB...") { %x(rails db:create) }
       show_spinner("Migrando o DB...") { %x(rails db:migrate) }
-      %x(rails dev:add_coins)# chama o rake criado abaixo...
       %x(rails dev:add_mining_types)# chama o rake criado abaixo...
+      %x(rails dev:add_coins)# chama o rake criado abaixo...
     else
       puts "Você não está em ambiente de desenvolvimento!"
     end
@@ -19,17 +19,21 @@ namespace :dev do
         {
           description: "Bitcoin",
           acronym: "BTC",
-          url_image: "https://static.vecteezy.com/system/resources/previews/008/505/801/non_2x/bitcoin-logo-color-illustration-png.png"
+          url_image: "https://static.vecteezy.com/system/resources/previews/008/505/801/non_2x/bitcoin-logo-color-illustration-png.png",
+          mining_type: MiningType.find_by(acronym: "PoW")
         },
         {
           description: "Dash",
           acronym: "DASH",
-          url_image: "https://www.pngall.com/wp-content/uploads/10/Dash-Crypto-Logo-PNG-Cutout.png"
+          url_image: "https://www.pngall.com/wp-content/uploads/10/Dash-Crypto-Logo-PNG-Cutout.png",
+          mining_type: MiningType.all.sample
+
         },
         {
         description: "Ethereum",
         acronym: "ETH",
-        url_image: "https://upload.wikimedia.org/wikipedia/commons/b/b7/ETHEREUM-YOUTUBE-PROFILE-PIC.png"
+        url_image: "https://upload.wikimedia.org/wikipedia/commons/b/b7/ETHEREUM-YOUTUBE-PROFILE-PIC.png",
+        mining_type: MiningType.all.sample
         }
       ]
     
