@@ -930,3 +930,109 @@ Isso são as Rake Tasks ☝️ - Para listar todas digite: rails -T
 > dropa, cria, cria a estrutura das tabelas e alimenta o db
 > 
 </aside>
+
+
+<aside>
+💡 Para alterar algo na Migration:
+
+> É possível desfazer as migrações com o `db:rollback`
+> 
+> 
+> E apagar o scaffold com `destoy`
+> 
+> Ex: `rails db:rollback` - vai desfazer a última migration
+> 
+> `rails destroy scaffold NomeDaMigration` - apagando o scaffold
+> 
+
+Após isso, basta recriar a migration novamente, com as correções nos nomes dos campos, etc…
+
+> Para criar a migration:
+> 
+> 
+> ```ruby
+> rails g scaffold MiningType description:string acronym:string
+> ```
+> 
+> Logo após digite: `rails db:migrate` para migrar o db e depois digite: `rails dev:setup` para popular o banco com os dados iniciais
+> 
+</aside>
+
+<aside>
+💡 Criando migration **standalone**
+
+```ruby
+rails g migration AddMiningTypeToCoins mining_type:references
+```
+
+Existe uma convenção na criação de uma migration standalone:
+
+`rails g migration` é o comando básico e o que vem depois o nome da nova migration, que deve seguir um padrão: 
+
+- quando é para add um campo na tabela: `AddNomeDoCampoToNomeDaTabela`
+</aside>
+
+<aside>
+💡 Para alterar algo na Migration:
+
+> É possível desfazer as migrações com o `db:rollback`
+> 
+> 
+> E apagar o scaffold com `destoy`
+> 
+> Ex: `rails db:rollback` - vai desfazer a última migration
+> 
+> `rails destroy scaffold NomeDaMigration` - apagando o scaffold
+> 
+
+Após isso, basta recriar a migration novamente, com as correções nos nomes dos campos, etc…
+
+> Para criar a migration:
+> 
+> 
+> ```ruby
+> rails g scaffold MiningType description:string acronym:string
+> ```
+> 
+> Logo após digite: `rails db:migrate` para migrar o db e depois digite: `rails dev:setup` para popular o banco com os dados iniciais
+> 
+</aside>
+
+<aside>
+💡 Criando migration **standalone**
+
+```ruby
+rails g migration AddMiningTypeToCoins mining_type:references
+```
+
+Existe uma convenção na criação de uma migration standalone:
+
+`rails g migration` é o comando básico e o que vem depois o nome da nova migration, que deve seguir um padrão: 
+
+- quando é para add um campo na tabela: `AddNomeDoCampoToNomeDaTabela`
+</aside>
+
+<aside>
+☃️ Hora da prática com Rails
+
+  <aside>
+  💡 [https://www.campuscode.com.br/conteudos/ruby-on-rails-api-com-tdd](https://www.campuscode.com.br/conteudos/ruby-on-rails-api-com-tdd)
+
+  </aside>
+
+  <aside>
+  💡 [https://onebitcode.com/api-completa-rails/](https://onebitcode.com/api-completa-rails/)
+
+  </aside>
+
+  <aside>
+  💡 [https://medium.com/jaguaribetech/criando-api-rest-com-ruby-on-rails-1ed90d252831](https://medium.com/jaguaribetech/criando-api-rest-com-ruby-on-rails-1ed90d252831)
+
+  </aside>
+
+  <aside>
+  💡 [https://onebitcode.com/consumindo-apis-ruby/](https://onebitcode.com/consumindo-apis-ruby/)
+
+  </aside>
+
+</aside>  
