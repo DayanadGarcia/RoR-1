@@ -1016,23 +1016,54 @@ Existe uma convenção na criação de uma migration standalone:
 ☃️ Hora da prática com Rails
 
   <aside>
-  💡 [https://www.campuscode.com.br/conteudos/ruby-on-rails-api-com-tdd](https://www.campuscode.com.br/conteudos/ruby-on-rails-api-com-tdd)
+    💡 [https://www.campuscode.com.br/conteudos/ruby-on-rails-api-com-tdd](https://www.campuscode.com.br/conteudos/ruby-on-rails-api-com-tdd)
 
   </aside>
 
   <aside>
-  💡 [https://onebitcode.com/api-completa-rails/](https://onebitcode.com/api-completa-rails/)
+    💡 [https://onebitcode.com/api-completa-rails/](https://onebitcode.com/api-completa-rails/)
 
   </aside>
 
   <aside>
-  💡 [https://medium.com/jaguaribetech/criando-api-rest-com-ruby-on-rails-1ed90d252831](https://medium.com/jaguaribetech/criando-api-rest-com-ruby-on-rails-1ed90d252831)
+    💡 [https://medium.com/jaguaribetech/criando-api-rest-com-ruby-on-rails-1ed90d252831](https://medium.com/jaguaribetech/criando-api-rest-com-ruby-on-rails-1ed90d252831)
 
   </aside>
 
   <aside>
-  💡 [https://onebitcode.com/consumindo-apis-ruby/](https://onebitcode.com/consumindo-apis-ruby/)
+    💡 [https://onebitcode.com/consumindo-apis-ruby/](https://onebitcode.com/consumindo-apis-ruby/)
 
   </aside>
 
 </aside>  
+
+<aside>
+  💡 **MAP**
+
+  ```ruby
+  array.map do |item|
+    item*2
+  end
+  || # em uma linha:
+  array.map { |item| item*2 }
+  ```
+
+  ```ruby
+  array.map { |coin| coin.description }
+  ||
+  array.map(&:description)
+  # gerando um array de arrays com map:
+  array.map { |coin| [coin.description, coin.acronym] }
+  ```
+
+- Usando o Pluck ao invés do map:
+    
+  ```ruby
+  array.pluck(:description)
+  ||
+  array.pluck(:description, :acronym)
+  #gera um array de arrays:
+  [[description, acronyn], [description, acronyn]]
+  ```
+    
+</aside>
