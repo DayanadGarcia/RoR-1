@@ -1,2 +1,40 @@
 en:
   hello: "Hello world"
+  links:
+    edit: "Edit"
+    show: "Show"
+    delete: "Delete"
+  headers:
+    description: "Description"
+    acronym: "Acronym"
+    image: "Image"
+    mining_type: "Mining Type"
+    url_image: "Url image"
+  coins:
+    links:
+      show_coin: "Show this coin"
+      new_coin: "New Coin"
+      back_to_coins: "Back to coins"
+      edit_coin: "Edit this coin"
+      destroy_coin: "Delete this coin"
+      update_coin: "Update coin"
+    title:
+      coin: "Coins!"
+    msg_delete: "Coin was successfully destroyed."
+    msg_update: "Coin was successfully updated."
+    msg_create: "Coin was successfully created."
+  welcome:
+    register_coin: "Register new Coins"
+    mining: "Mining Type"
+  miningType:
+    show: "Show this mining type"
+    back: "Back to mining types"
+    new: "New mining type"
+    edit: "Edit mining type"
+    delete: "delete mining type"
+    delete_sure: "Are you sure?"
+    title: "Tipos de Mineração"
+    title_new: "New mining type"
+    msg_update: "Mining type was successfully updated."
+    msg_delete: "Mining type was successfully destroyed."
+    msg_create: "Mining type was successfully created."

@@ -27,7 +27,7 @@ class CoinsController < ApplicationController
 
     respond_to do |format|
       if @coin.save
-        format.html { redirect_to coin_url(@coin), notice: "Coin was successfully created." }
+        format.html { redirect_to coin_url(@coin), notice: I18n.t("coins.msg_create") }
         format.json { render :show, status: :created, location: @coin }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -40,7 +40,7 @@ class CoinsController < ApplicationController
   def update
     respond_to do |format|
       if @coin.update(coin_params)
-        format.html { redirect_to coin_url(@coin), notice: "Coin was successfully updated." }
+        format.html { redirect_to coin_url(@coin), notice: I18n.t("coins.msg_update") }
         format.json { render :show, status: :ok, location: @coin }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -54,7 +54,7 @@ class CoinsController < ApplicationController
     @coin.destroy
 
     respond_to do |format|
-      format.html { redirect_to coins_url, notice: "Coin was successfully destroyed." }
+      format.html { redirect_to coins_url, notice: I18n.t("coins.msg_delete") }
       format.json { head :no_content }
     end
   end

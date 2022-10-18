@@ -12,23 +12,23 @@
   <% end %>
 
   <div>
-    <%= form.label :description, style: "display: block" %>
+    <%= form.label t("headers.description"), style: "display: block" %>
     <%= form.text_field :description %>
   </div>
 
   <div>
-    <%= form.label :acronym, style: "display: block" %>
+    <%= form.label t("headers.acronym"), style: "display: block" %>
     <%= form.text_field :acronym %>
   </div>
 
   <div>
     <%# <%= image_tag coin.url_image, width: 25, heigth: 25 %>
-    <%= form.label :url_image, style: "display: block" %>
+    <%= form.label t("headers.url_image"), style: "display: block" %>
     <%= form.text_field :url_image %>
   </div>
 
   <div>
-    <%= form.label :mining_type_id, style: "display: block" %>
+    <%= form.label t("headers.mining_type"), style: "display: block" %>
     <%= form.select("mining_type_id", @mining_type_options, {include_blank: true} ) %>
   </div>
   </br>
