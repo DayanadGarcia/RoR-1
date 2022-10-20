@@ -32,7 +32,6 @@ en:
     new: "New mining type"
     edit: "Edit mining type"
     delete: "delete mining type"
-    delete_sure: "Are you sure?"
     title: "Tipos de Mineração"
     title_new: "New mining type"
     msg_update: "Mining type was successfully updated."
