@@ -1,0 +1,40 @@
+pt-BR:
+  actual_locale: "Português do Brasil"
+  hello: "Olá Mundo!"
+  links:
+    edit: "Editar"
+    show: "Mostrar"
+    delete: "Apagar"
+  headers:
+    description: "Descrição"
+    acronym: "Sigla"
+    image: "Imagem"
+    mining_type: "Tipo de mineração"
+    url_image: "Url da imagem"
+  coins:
+    links:
+      show_coin: "Exibir moeda"
+      new_coin: "Nova moeda"
+      back_to_coins: "Voltar para moedas"
+      edit_coin: "Editar essa moeda"
+      destroy_coin: "Apagar essa moeda"
+      update_coin: "Atualizar moeda"
+    title:
+      coin: "Moedas!"
+    msg_delete: "Moeda apagada com sucesso!"
+    msg_update: "Moeda atualizada com sucesso! "
+    msg_create: "Moeda criada com sucesso!"
+  welcome:
+    register_coin: "Cadastro de Moedas"
+    mining: "Tipos de Mineração"
+  miningType:
+    show: "Mostrar mineração"
+    back: "Voltar para tipos de mineração"
+    new: "Criar mineração"
+    edit: "Editar mineração"
+    delete: "Apagar mineração"
+    title: "Tipos de Mineração"
+    title_new: "Nova Mineração"
+    msg_update: "Mineração atualizada com sucesso!"
+    msg_delete: "Mineração deletada com sucesso!"
+    msg_create: "Mineração criada com sucesso!"
