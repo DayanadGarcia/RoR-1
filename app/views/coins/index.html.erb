@@ -1,4 +1,5 @@
 <p style="color: green"><%= notice %></p>
+
 <p><strong>Data: </strong><%= data_br(Date.today)  %></p>
 <p><%= nome_aplicacao %></p>
 <h1><%=  t("coins.title.coin") %></h1>
@@ -6,9 +7,9 @@
 <table>
   <thead>
     <tr>
-      <th><%= t("headers.description") %></th>
-      <th><%= t("headers.acronym") %></th>
-      <th><%= t("headers.image") %></th>
+      <th><%= @coins.human_attribute_name(:description) %></th>
+      <th><%= @coins.human_attribute_name(:acronym) %></th>
+      <th><%= @coins.human_attribute_name(:url_image) %></th>
     </tr>
   </thead>
 </table>

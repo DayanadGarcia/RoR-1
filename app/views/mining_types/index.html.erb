@@ -1,10 +1,30 @@
 <p style="color: green"><%= notice %></p>
 
-<h1><%= t("miningType.title") %></h1>
+<h1><%= @mining_types.human_attribute_name(:description) %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= @mining_types.human_attribute_name(:description) %></th>
+      <th><%= @mining_types.human_attribute_name(:acronym) %></th>
+    </tr>
+  </thead>
+  <thead>
+    <tr>
+      <th>---- ---- ---- ----</th>
+    </tr>
+  </thead>
+</table>
+
 
 <div id="mining_types">
   <% @mining_types.each do |mining_type| %>
-    <%= render mining_type %>
+  <tr>
+      <td><%= mining_type.description %></td>
+      <td>-</td>
+      <td><%= mining_type.acronym %></td>
+    </tr>
+    <%# <%= render mining_type %>
     <p>
       <%= link_to t("miningType.show"), mining_type %>
     </p>
